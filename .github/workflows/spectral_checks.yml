@@ -9,7 +9,8 @@ jobs:
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-node@v3
-      - run: npm install -g @stoplight/spectral-cli @stoplight/spectral-owasp-ruleset 
+      - run: npm install -g @stoplight/spectral-cli
+      - run: npm install -g @stoplight/spectral-owasp-ruleset 
       - run: spectral lint rfqs-api-v1.yml -r .owasp-spectral.yml                                                                                                                                                                        
 
 

@@ -1,0 +1,16 @@
+name: Spectral Checks
+
+on:
+  - push
+
+jobs:
+  OWASPChecks:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v3
+      - run: npm install -g @stoplight/spectral-cli
+      - run: npm install @stoplight/spectral-owasp-ruleset 
+      - run: spectral lint rfqs-api-v1.yml -r .owasp-spectral.yml                                                                                                                                                                        
+
+

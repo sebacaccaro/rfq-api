@@ -1,0 +1,23 @@
+product:
+  type: string
+  maxLength: 20
+  pattern: '(\w+\W*)*'
+  example: Firecracker
+quantity:
+  type: integer
+  format: int32
+  minimum: 0
+  maximum: 1000
+price:
+  type: number
+  minimum: 0
+  example: 1.99
+shipment:
+  type: string
+  enum:
+    - FOB
+    - DAT
+mode:
+  type: string
+  pattern: '[A-Z]{3}'
+  maxLength: 3

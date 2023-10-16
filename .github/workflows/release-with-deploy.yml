@@ -12,6 +12,7 @@ env:
 jobs:
   Release:
     runs-on: ubuntu-latest
+    environment: Release
     steps:
       - uses: actions/checkout@v3
       - run: gh release create --generate-notes "${{ github.ref_name }}" "rfqs-api-v1.yml#OpenAPI"
